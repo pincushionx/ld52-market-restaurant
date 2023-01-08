@@ -1,0 +1,163 @@
+VisualElement {
+}
+
+.HideInUiBuilder {
+    display: none;
+}
+
+.ChatItemContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ChatItemText {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.InventoryItem {
+    width: 25%;
+    height: 30px;
+    justify-content: flex-end;
+}
+
+.unity-text-field__input {
+    -unity-text-align: upper-center;
+    align-items: flex-start;
+    -unity-font-definition: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular%20SDF.asset?fileID=11400000&guid=60a21753316e93b4c80fcf79cca39205&type=2#BadComic-Regular SDF');
+    -unity-font: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular.ttf?fileID=12800000&guid=a34f235cd67676643b79683dde9be6af&type=3#BadComic-Regular');
+}
+
+.CenteredInputField {
+}
+
+.LeftWidth {
+    width: 20%;
+}
+
+#Toggle .unity-toggle__checkmark {
+    background-color: rgba(0, 255, 15, 0);
+    -unity-background-image-tint-color: rgb(59, 80, 115);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    width: 100%;
+    height: 100%;
+}
+
+.unity-progress-bar__progress {
+    background-image: none;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.unity-progress-bar__container {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.unity-progress-bar__background {
+}
+
+.Button {
+    background-color: rgb(197, 215, 217);
+    -unity-font: none;
+    -unity-font-definition: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular%20SDF.asset?fileID=11400000&guid=60a21753316e93b4c80fcf79cca39205&type=2#BadComic-Regular SDF');
+    border-left-color: rgb(22, 132, 140);
+    border-right-color: rgb(22, 132, 140);
+    border-top-color: rgb(22, 132, 140);
+    border-bottom-color: rgb(22, 132, 140);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.TitleText {
+    -unity-font-definition: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular%20SDF.asset?fileID=11400000&guid=60a21753316e93b4c80fcf79cca39205&type=2#BadComic-Regular SDF');
+    font-size: 18px;
+}
+
+.Text {
+    -unity-font-definition: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular%20SDF.asset?fileID=11400000&guid=60a21753316e93b4c80fcf79cca39205&type=2#BadComic-Regular SDF');
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.SmallText {
+    font-size: 12px;
+}
+
+.BorderedSection {
+    border-left-color: rgba(30, 17, 115, 0);
+    border-right-color: rgba(30, 17, 115, 0);
+    border-top-color: rgba(30, 17, 115, 0);
+    border-bottom-color: rgba(30, 17, 115, 0);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: resource('Images/BoxButton');
+}
+
+.unity-scroll-view__content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.VerticalPadText {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.unity-base-text-field__input {
+    -unity-font-definition: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular%20SDF.asset?fileID=11400000&guid=60a21753316e93b4c80fcf79cca39205&type=2#BadComic-Regular SDF');
+    -unity-font: url('project://database/Assets/Fonts/bad_comic/BadComic-Regular.ttf?fileID=12800000&guid=a34f235cd67676643b79683dde9be6af&type=3#BadComic-Regular');
+}
+
+.PopupBackground {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: resource('Images/BoxBg');
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#Toggle .unity-toggle__input {
+    width: 50px;
+    height: 50px;
+}

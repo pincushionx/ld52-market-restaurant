@@ -1,0 +1,253 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Main.uss?fileID=7433441132597879392&amp;guid=c6efc258efdc6c64f9db90713c9d5f09&amp;type=3#Main" />
+    <ui:VisualElement name="RestaurantContainer" style="width: 100%; height: 100%; position: absolute; flex-direction: column; flex-wrap: wrap;">
+        <ui:VisualElement name="Left" class="LeftWidth" style="position: relative; left: auto; height: 100%;" />
+        <ui:VisualElement name="Center" style="height: 100%; width: 60%; align-items: center;">
+            <ui:VisualElement name="Top" style="height: 5%; width: 100%;" />
+            <ui:VisualElement name="CookContainer" style="width: 610px; height: auto; align-items: flex-end;">
+                <ui:VisualElement class="BorderedSection" style="width: 70%; height: 100%;">
+                    <ui:VisualElement name="CookTitleContainer" style="width: 100%; height: auto; padding-bottom: 10px;">
+                        <ui:Label text="Harvest Cookpot" display-tooltip-when-elided="true" name="Label" class="TitleText" />
+                        <ui:Label text="Select 2 to 4 ingredients from the inventory. Try to combo for extra money and yums." display-tooltip-when-elided="true" name="Description" class="Text SmallText" style="white-space: normal;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CooktopContainer" style="align-items: center; justify-content: center; height: 100px; width: 100%;">
+                        <ui:VisualElement name="CookIngredients" style="width: 400px; height: 100px; flex-direction: row;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CooktopMoneyContainer" style="flex-direction: row; justify-content: flex-end; height: auto; flex-wrap: wrap;">
+                        <ui:Label text="-" display-tooltip-when-elided="true" name="CooktopMoney" class="Text" style="width: 100%; -unity-text-align: upper-left; flex-wrap: wrap; white-space: normal;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CookButtonContainer" style="align-items: center; justify-content: center; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                        <ui:Button text="Cook this recipe!" display-tooltip-when-elided="true" name="CookButton" class="Button" style="width: 150px; height: 35px; -unity-font: none; background-color: rgb(250, 237, 152);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="InventoryContainer" class="BorderedSection" style="width: 600px; height: auto; left: 0; top: 0; right: 0; bottom: 0; flex-wrap: nowrap; flex-direction: column;">
+                <ui:VisualElement name="InventoryTitle" style="width: 100%; height: auto;">
+                    <ui:Label text="Ingredients Inventory" display-tooltip-when-elided="true" class="TitleText" />
+                    <ui:Label text="Buy ingredients from the market, and use any 2 to 4 ingredients to cook up something good." display-tooltip-when-elided="true" class="Text SmallText" />
+                </ui:VisualElement>
+                <ui:ScrollView name="InventoryItems" mode="Vertical" style="flex-wrap: wrap; flex-direction: row; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;" />
+                <ui:VisualElement name="InventoryItems_old" style="flex-direction: row; width: 100%; flex-wrap: wrap;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Right" class="LeftWidth" style="position: relative; left: auto; height: 100%;">
+            <ui:VisualElement name="CustomerRequestsContainer" style="height: 33%; display: none;">
+                <ui:VisualElement name="CustomerRequestsTitleContainer">
+                    <ui:Label text="Customer Requests" display-tooltip-when-elided="true" name="CustomerRequestsTitle" class="TitleText" />
+                    <ui:Label text="Your patrons will eat anything, but they&apos;ll pay extra for these tasty treats!" display-tooltip-when-elided="true" name="CurrentCombosDescription" class="Text SmallText" style="white-space: normal;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CustomerRequests" style="height: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="CurrentCombosContainer" class="BorderedSection" style="height: 50%;">
+                <ui:VisualElement name="CurrentCombosTitleContainer" style="height: 35%;">
+                    <ui:Label text="Tasty Combos" display-tooltip-when-elided="true" name="CurrentCombosTitle" class="TitleText" />
+                    <ui:Label text="Use these combos in your dishes for bonus Yums and Money!" display-tooltip-when-elided="true" name="CurrentCombosDescription" class="Text SmallText" style="white-space: normal;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CurrentCombos" style="height: 65%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ComingCombosContainer" class="BorderedSection" style="height: 50%;">
+                <ui:VisualElement name="ComingCombosTitleContainer">
+                    <ui:Label text="Trending Combos" display-tooltip-when-elided="true" name="ComingCombosTitle" class="TitleText" />
+                    <ui:Label text="These will be available soon" display-tooltip-when-elided="true" name="ComingCombosDescription" class="Text SmallText" style="flex-wrap: wrap;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ComingCombos" style="height: auto;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="MarketContainer" class="HideInUiBuilder" style="height: 100%; width: 100%; position: absolute; align-items: center;">
+        <ui:VisualElement name="Left" class="LeftWidth" style="position: relative; left: auto; height: 100%;" />
+        <ui:VisualElement name="Lower20Right80" style="height: 20%; width: 80%; position: absolute; left: 20%; bottom: 0;">
+            <ui:VisualElement name="Centered" style="align-items: flex-start; justify-content: flex-start;">
+                <ui:VisualElement name="Chat" class="Text BorderedSection" style="width: 70%; height: 300px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;">
+                    <ui:VisualElement name="ChatTitleContainer">
+                        <ui:Label text="Chat title" display-tooltip-when-elided="true" name="ChatTitle" class="TitleText" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ChatTextContainer" class="ChatItemContainer" style="flex-wrap: wrap;">
+                        <ui:Label text="Chat text" display-tooltip-when-elided="true" name="ChatText" class="Text" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; white-space: normal;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ChatItems" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="TransactionContainer" class="HideInUiBuilder" style="width: 100%; height: 100%; position: relative; justify-content: center; align-items: center;">
+        <ui:VisualElement name="TransactionContainerInner" class="PopupBackground" style="width: 500px; height: auto;">
+            <ui:VisualElement name="TransactionTitleContainer" style="height: 15%;">
+                <ui:Label text="Buy this ingredient?" display-tooltip-when-elided="true" name="Text" class="TitleText" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TransactionProductContainer" style="flex-direction: row; height: 35%; width: 100%;">
+                <ui:VisualElement name="TransactionProductStats" style="width: 50%; height: 100%;">
+                    <ui:VisualElement name="TransactionItemNameContainer" style="flex-direction: row;">
+                        <ui:Label text="Ingredient" display-tooltip-when-elided="true" name="TransactionItemNameLabel" class="Text VerticalPadText" style="width: 125px;" />
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="TransactionItemNameText" class="Text VerticalPadText" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="TransactionQuantityAvailableContainer" style="flex-direction: row;">
+                        <ui:Label text="Quantity available" display-tooltip-when-elided="true" name="TransactionQuantityAvailableLabel" class="Text VerticalPadText" style="width: 125px;" />
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="TransactionQuantityAvailableText" class="Text VerticalPadText" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="TransactionQualityContainer" style="flex-direction: row;">
+                        <ui:Label text="Quality" display-tooltip-when-elided="true" name="TransactionQualityLabel" class="Text VerticalPadText" style="width: 125px;" />
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="TransactionQualityText" class="Text VerticalPadText" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="TransactionItemYumContainer" style="flex-direction: row;">
+                        <ui:Label text="Taste" display-tooltip-when-elided="true" name="TransactionYumLabel" class="Text VerticalPadText" style="width: 125px;" />
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="TransactionYumText" class="Text VerticalPadText" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="TransactionItemCostContainer" style="flex-direction: row;">
+                        <ui:Label text="Price per unit" display-tooltip-when-elided="true" name="TransactionItemCostLabel" class="Text VerticalPadText" style="width: 125px;" />
+                        <ui:Label text="Label" display-tooltip-when-elided="true" name="TransactionItemCostText" class="Text VerticalPadText" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="TransactionProductImageContainer" style="width: 50%; height: 100%; align-items: center;">
+                    <ui:VisualElement name="VisualElement" style="height: 10%;" />
+                    <ui:VisualElement name="TransactionProductImage" style="width: 75%; height: 75%; -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:ProgressBar value="9" name="TransactionProductQualityStars" high-value="10" low-value="0" picking-mode="Ignore" style="width: 35%; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; height: auto; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="TransactionQuantityTitleContainer" style="width: 100%; align-items: center; flex-direction: row; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 10px; margin-bottom: 0;">
+                <ui:Label text="How many do you want to buy?" display-tooltip-when-elided="true" class="TitleText" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TransactionQuantityContainer" style="width: 100%; align-items: center; flex-direction: row; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 10px; margin-bottom: 0;">
+                <ui:Button text="-" display-tooltip-when-elided="true" name="QuantityLessButton" class="Button" />
+                <ui:TextField picking-mode="Ignore" value="1" text="1" name="QuantityInput" readonly="true" focusable="true" class="CenteredInputField Text" style="width: 50px;" />
+                <ui:Button text="+" display-tooltip-when-elided="true" name="QuantityMoreButton" class="Button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TransactionTotalCostContainer" style="width: 100%; align-items: center; flex-direction: row; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 10px; margin-bottom: 10px;">
+                <ui:Label text="Total price" display-tooltip-when-elided="true" name="TransactionTotalCostLabel" class="TitleText" style="width: auto;" />
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="TransactionTotalCostText" class="TitleText" />
+            </ui:VisualElement>
+            <ui:VisualElement name="CommitButtonsContainer" style="flex-direction: row; justify-content: center; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px;">
+                <ui:Button text="Buy" display-tooltip-when-elided="true" name="BuyButton" class="Button" style="width: 75px;" />
+                <ui:Button text="Don&apos;t Buy" display-tooltip-when-elided="true" name="CancelButton" class="Button" style="width: 75px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="TurnSummaryContainer" class="HideInUiBuilder" style="width: 100%; height: 100%; position: relative; justify-content: center; align-items: center;">
+        <ui:VisualElement name="TurnSummaryContainerInner" class="PopupBackground" style="width: 500px; height: auto;">
+            <ui:VisualElement name="TurnSummaryTitleContainer" style="height: auto;">
+                <ui:Label text="On to cook up the next harvest!" display-tooltip-when-elided="true" name="Text" class="TitleText" />
+                <ui:Label text="What a turn! A new harvest is coming, and customer tastes changed with the times.  Don&apos;t forget to check out the new combos. Customers love combos!" display-tooltip-when-elided="true" name="Text" class="Text" style="flex-wrap: nowrap; white-space: normal;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TurnSummaryDetailsContainer" style="width: 100%; height: auto; padding-left: 0; padding-right: 0; padding-top: 10px; padding-bottom: 10px;">
+                <ui:VisualElement name="TurnSummaryTurnContainer" style="flex-direction: row;">
+                    <ui:Label text="Turn" display-tooltip-when-elided="true" name="TurnSummaryTurnLabel" class="Text VerticalPadText TitleText" style="width: auto; margin-right: 0;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TurnSummaryTurn" class="Text VerticalPadText TitleText" style="margin-left: 0; padding-left: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TurnSummaryIngredientsPurchasedContainer" style="flex-direction: row;">
+                    <ui:Label text="Ingredients purchased" display-tooltip-when-elided="true" name="TurnSummaryIngredientsPurchasedLAbel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TurnSummaryIngredientsPurchased" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TurnSummaryIngredientsUsedContainer" style="flex-direction: row;">
+                    <ui:Label text="Ingredients used" display-tooltip-when-elided="true" name="TurnSummaryIngredientsUsedLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TurnSummaryIngredientsUsed" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TurnSummaryYumContainer" style="flex-direction: row;">
+                    <ui:Label text="Yums heard" display-tooltip-when-elided="true" name="TurnSummaryYumLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TurnSummaryYum" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TurnSummaryMoneyContainer" style="flex-direction: row;">
+                    <ui:Label text="Money made" display-tooltip-when-elided="true" name="TurnSummaryMoneyLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TurnSummaryMoney" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TurnSummaryMoneySpentContainer" style="flex-direction: row;">
+                    <ui:Label text="Money spent" display-tooltip-when-elided="true" name="TurnSummaryMoneySpentLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TurnSummaryMoneySpent" class="Text VerticalPadText" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CommitButtonsContainer" style="flex-direction: row; justify-content: center; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px;">
+                <ui:Button text="Continue" display-tooltip-when-elided="true" name="TurnSummaryContinueButton" class="Button" style="width: 75px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="LoseConditionContainer" class="HideInUiBuilder" style="width: 100%; height: 100%; position: relative; justify-content: center; align-items: center;">
+        <ui:VisualElement name="TotalSummaryContainerInner" class="PopupBackground" style="width: 500px; height: auto;">
+            <ui:VisualElement name="TotalSummaryTitleContainer" style="height: auto;">
+                <ui:Label text="Oh no! You&apos;re out of business!" display-tooltip-when-elided="true" name="Text" class="TitleText" />
+                <ui:Label text="Now who&apos;s going to cook up the delicious harvest for hungry patrons?!" display-tooltip-when-elided="true" name="Text" class="Text" style="flex-wrap: nowrap; white-space: normal;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TotalSummaryDetailsContainer" style="width: 100%; height: auto; padding-left: 0; padding-right: 0; padding-top: 10px; padding-bottom: 10px;">
+                <ui:VisualElement name="TotalSummaryTurnsContainer" style="flex-direction: row;">
+                    <ui:Label text="Turns" display-tooltip-when-elided="true" name="TotalSummaryTurnsLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TotalSummaryTurns" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TotalSummaryIngredientsPurchasedContainer" style="flex-direction: row;">
+                    <ui:Label text="Ingredients purchased" display-tooltip-when-elided="true" name="TotalSummaryIngredientsPurchasedLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TotalSummaryIngredientsPurchased" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TotalSummaryIngredientsUsedContainer" style="flex-direction: row;">
+                    <ui:Label text="Ingredients used" display-tooltip-when-elided="true" name="TotalSummaryIngredientsUsedLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TotalSummaryIngredientsUsed" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TotalSummaryYumContainer" style="flex-direction: row;">
+                    <ui:Label text="Yums heard" display-tooltip-when-elided="true" name="TotalSummaryYumLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TotalSummaryYum" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TotalSummaryMoneyContainer" style="flex-direction: row;">
+                    <ui:Label text="Money made" display-tooltip-when-elided="true" name="TotalSummaryMoneyLAbel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TotalSummaryMoney" class="Text VerticalPadText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TotalSummaryMoneySpentContainer" style="flex-direction: row;">
+                    <ui:Label text="Money spent" display-tooltip-when-elided="true" name="TotalSummaryMoneySpentLabel" class="Text VerticalPadText" style="width: 160px;" />
+                    <ui:Label text="Label" display-tooltip-when-elided="true" name="TotalSummaryMoneySpent" class="Text VerticalPadText" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ThanksForPlaying" style="height: auto;">
+                <ui:Label text="Thanks for playing" display-tooltip-when-elided="true" name="Text" class="TitleText" />
+                <ui:Label text="This game was made for Ludum Dare 52, with the theme &quot;Harvest&quot;." display-tooltip-when-elided="true" name="Text" class="Text" style="flex-wrap: nowrap; white-space: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Tutorial" class="HideInUiBuilder" style="justify-content: center; align-items: center; width: 100%; height: 100%;">
+        <ui:VisualElement name="Tut0" class="PopupBackground" style="width: 500px; height: auto;">
+            <ui:VisualElement name="TurnSummaryTitleContainer" style="height: auto;">
+                <ui:Label text="Welcome to the Harvest Market restaurant" display-tooltip-when-elided="true" name="Text" class="TitleText" />
+                <ui:Label text="Welcome to Market Restaurant, where only the freshest ingredients will do. As head chef, your job is to cook yummy recipes for our clientele. Our clientele have discening tastes, and they will pay very well for dishes that are tuned to their palate.&#10;&#10;We buy our ingredients at the harvest market that is located next door to our restaurant. It&apos;s so close that at any time, you can click the &quot;Visit the Market&quot; button to go there.&#10;&#10;The market has 4 stalls, with ingredients harvested freshly from their farms. Click on their blue stall tables to pay them a visit.&#10;&#10;Don&apos;t be shy, they&apos;ll only sell you ingredients that you touch, so go ahead and click on the ingredients to inspect them. Higher quality ingredients taste better, and better tasting ingredients sell for higher prices, you know.&#10;&#10;When you buy the ingredients, they&apos;ll be shipped back to the restaurant for you. There&apos;s luxury in everything we do.&#10;&#10;Click &quot;Visit the Restaurant&quot; in the lower corner of the screen to go there (and to continue the tutorial)." display-tooltip-when-elided="true" name="Text" class="Text" style="flex-wrap: nowrap; white-space: normal;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="SkipTutorial" style="flex-direction: row; justify-content: center; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px;">
+                <ui:Button text="Skip tutorial" display-tooltip-when-elided="true" name="SkipTutorialButton" class="Button" style="width: 100px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Tut1" class="PopupBackground HideInUiBuilder" style="width: 500px; height: auto;">
+            <ui:VisualElement name="TurnSummaryTitleContainer" style="height: auto;">
+                <ui:Label text="The restaurant" display-tooltip-when-elided="true" name="Text" class="TitleText" />
+                <ui:Label text="After you buy them, the ingredients will be shown here. All you need to do is click on 2 to 4 ingredients to get cooking!&#10;&#10;But never forget, our clientele have discerning tastes, so please cook with combo ingredients as often as possible. I&apos;d say that we&apos;d go out of business if we didn&apos;t make mostly &quot;Tasty Combos&quot;. The best part is that a single dish can have up to 3 combos! Don&apos;t wait too long though, they will leave after a few turns.&#10;&#10;Our market research team keeps us updated on the latest &quot;Trending Combos&quot;, so we can be ready for tomorrow&apos;s harvest.&#10;&#10;Oh! I almost forgot. This restaurant costs money to upkeep, and after each turn it gets more expensive, so watch out for the Upkeep.&#10;&#10;This is a turn-based game. When you&apos;re done with a harvest, click &quot;End turn&quot;. The combos and market stalls will be replenished." display-tooltip-when-elided="true" name="Text" class="Text" style="flex-wrap: nowrap; white-space: normal;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="EndTutorial" style="flex-direction: row; justify-content: center; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px;">
+                <ui:Button text="End tutorial" display-tooltip-when-elided="true" name="EndTutorialButton" class="Button" style="width: 100px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="SharedLowerLeftCorner" class="LeftWidth" style="flex-direction: column; justify-content: flex-end; bottom: 0; position: absolute; height: 20%;">
+        <ui:VisualElement name="Bottom" style="position: absolute; bottom: 0; width: 100%; flex-direction: row;">
+            <ui:VisualElement name="PlayerStatsContainer" class="BorderedSection" style="flex-direction: column; align-items: flex-end;">
+                <ui:VisualElement name="TurnContainer" style="flex-direction: row;">
+                    <ui:Label text="Turn" display-tooltip-when-elided="true" name="TurnLabel" class="Text" />
+                    <ui:Label text="-" display-tooltip-when-elided="true" name="Turn" class="Text" style="width: 100px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="UpkeepContainer" style="flex-direction: row;">
+                    <ui:Label text="Upkeep" display-tooltip-when-elided="true" name="UpkeepLabel" class="Text" />
+                    <ui:Label text="-" display-tooltip-when-elided="true" name="Upkeep" class="Text" style="width: 100px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="PointsContainer" style="flex-direction: row;">
+                    <ui:Label text="Yums" display-tooltip-when-elided="true" name="PointsLabel" class="Text" />
+                    <ui:Label text="-" display-tooltip-when-elided="true" name="Points" class="Text" style="width: 100px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="MoneyContainer" style="flex-direction: row;">
+                    <ui:Label text="Money" display-tooltip-when-elided="true" name="MoneyLabel" class="Text" />
+                    <ui:Label text="-" display-tooltip-when-elided="true" name="Money" class="Text" style="width: 100px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="StallLeftMenu" style="left: 0; position: relative; bottom: auto; flex-direction: column-reverse; padding-top: 10px;">
+                    <ui:VisualElement name="VisualElement">
+                        <ui:Button text="Visit the Market" display-tooltip-when-elided="true" name="ToMarketButton" class="Button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement">
+                        <ui:Button text="Visit the Restaurant" display-tooltip-when-elided="true" name="ToRestaurantButton" class="Button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement">
+                        <ui:Button text="End turn" display-tooltip-when-elided="true" name="EndTurnButton" class="Button" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

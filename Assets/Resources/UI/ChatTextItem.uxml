@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="ChatTextItem" class="ChatItemContainer">
+        <ui:Label text="Chat Text Item" display-tooltip-when-elided="true" class="ChatItemText" />
+    </ui:VisualElement>
+</ui:UXML>

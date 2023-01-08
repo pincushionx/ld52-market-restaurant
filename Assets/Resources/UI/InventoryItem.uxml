@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Main.uss?fileID=7433441132597879392&amp;guid=c6efc258efdc6c64f9db90713c9d5f09&amp;type=3#Main" />
+    <ui:VisualElement name="CookItem" class="InventoryItem" style="left: 0; height: 120px; width: 100px;">
+        <ui:VisualElement name="Image" style="background-image: none; background-color: rgba(255, 255, 255, 0); -unity-background-image-tint-color: rgb(255, 255, 255); height: 50px; -unity-background-scale-mode: scale-to-fit; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px;" />
+        <ui:Label text="-&#10;-&#10;-" display-tooltip-when-elided="true" name="Text" style="align-items: auto; -unity-text-align: upper-center; white-space: normal;" />
+        <ui:Toggle name="Toggle" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 100%; height: 100%; position: absolute;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="CookItem" class="InventoryItem" style="left: 0; height: 100px; width: 100px;">
+        <ui:VisualElement name="Image" style="background-image: none; background-color: rgba(255, 255, 255, 0); -unity-background-image-tint-color: rgb(255, 255, 255); height: 100%; -unity-background-scale-mode: scale-to-fit; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px;" />
+        <ui:Label text="Eggplant" display-tooltip-when-elided="true" name="Text" style="align-items: auto; -unity-text-align: upper-center;" />
+    </ui:VisualElement>
+</ui:UXML>

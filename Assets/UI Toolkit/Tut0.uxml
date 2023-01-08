@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="Tut0" class="MenuContainer" style="display: flex; visibility: visible;">
+        <ui:Label text="Welcome to game!" display-tooltip-when-elided="true" name="MessageTitle" class="MenuTitle" />
+        <ui:Label text="Tut1" display-tooltip-when-elided="true" name="MessageText" class="MenuText" />
+        <ui:VisualElement name="ButtonContainer" style="bottom: auto; height: 30px; justify-content: flex-end; align-items: flex-end;">
+            <ui:Button text="Ok!" display-tooltip-when-elided="true" name="OkButton" class="MenuButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

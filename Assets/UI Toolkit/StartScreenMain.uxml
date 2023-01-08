@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Main.uss?fileID=7433441132597879392&amp;guid=c6efc258efdc6c64f9db90713c9d5f09&amp;type=3#Main" />
+    <ui:VisualElement style="width: 100%; height: 100%; position: absolute; background-image: resource(&apos;UI/UI&apos;);">
+        <ui:VisualElement name="TitleContainer" style="width: 100%; height: 28%; align-items: center; justify-content: center; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-definition: url(&apos;project://database/Assets/Font/oxanium/Oxanium-Regular%20SDF.asset?fileID=11400000&amp;guid=3b705659577911549ad8bfb7147aaf9a&amp;type=2#Oxanium-Regular SDF&apos;); -unity-text-align: upper-center;">
+            <ui:Label text="Manta Fighter" display-tooltip-when-elided="true" name="Title" class="PlayerUIText" style="font-size: 100px; width: 60%; height: auto; -unity-text-align: middle-center; margin-left: 20%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TitleContainer" style="width: 100%; height: 28%; align-items: center; justify-content: center; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-definition: url(&apos;project://database/Assets/Font/oxanium/Oxanium-Regular%20SDF.asset?fileID=11400000&amp;guid=3b705659577911549ad8bfb7147aaf9a&amp;type=2#Oxanium-Regular SDF&apos;); -unity-text-align: upper-center; position: absolute; bottom: 3%;">
+            <ui:Label text="Manta Fighter" display-tooltip-when-elided="true" name="Title" class="EnemyUIText" style="font-size: 100px; width: 60%; height: auto; -unity-text-align: middle-center; margin-left: 0; margin-right: 20%; margin-top: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="MenuContainer" style="width: 100%; align-items: center; position: absolute; height: 100%; justify-content: center;">
+        <ui:Button text="Play!" display-tooltip-when-elided="true" name="StartButton" class="PlayerUIButton" style="width: 180px; height: 60px; font-size: 30px; -unity-text-outline-color: rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
